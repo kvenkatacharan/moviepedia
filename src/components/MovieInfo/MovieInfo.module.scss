@@ -1,0 +1,42 @@
+.mainContainer {
+  @apply flex justify-center  items-center h-full w-full p-4;
+  .moviePosterContainer {
+    padding: 2rem;
+  }
+  .movieInfoContainer {
+    @apply max-w-full p-4;
+    .headerInfo {
+      h1 {
+        @apply font-extrabold text-3xl;
+        span {
+          @apply text-gray-400 font-normal;
+        }
+      }
+    }
+    .description {
+      @apply my-4;
+      h3 {
+        @apply text-xl font-bold mb-2;
+      }
+      p {
+        line-height: 20px;
+      }
+    }
+    .cast {
+      @apply flex  gap-2;
+    }
+    .whereTos {
+      margin-top: 1rem;
+      display: flex;
+
+      img {
+        max-width: 50px;
+        border-radius: 0.5rem;
+        margin: 3px;
+        &.disney {
+          filter: invert(1);
+        }
+      }
+    }
+  }
+}

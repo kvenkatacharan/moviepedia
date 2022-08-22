@@ -1,0 +1,68 @@
+.container {
+  @apply bg-black   text-white mx-4 border border-gray-500 -mt-4  rounded-b-lg;
+  h1 {
+    cursor: default;
+    animation: slidein;
+    animation-duration: 250ms;
+    animation-fill-mode: forwards;
+
+    .full {
+      opacity: 0;
+      transition: all 250ms ease;
+    }
+
+    .abbr {
+      opacity: 1;
+      transition: all 250ms ease;
+    }
+
+    &:hover {
+      animation: slideout;
+      animation-duration: 250ms;
+      animation-fill-mode: forwards;
+
+      .full {
+        opacity: 1;
+        transition: all 250ms ease;
+      }
+
+      .abbr {
+        opacity: 0;
+        transition: all 250ms ease;
+      }
+    }
+  }
+}
+.innerContainer {
+  @apply flex justify-between mx-4 mt-8 mb-4;
+}
+.brandContainer {
+  @apply font-bold text-3xl;
+}
+
+.searchContainer {
+  @apply font-bold   text-2xl flex space-x-4 justify-between items-center;
+}
+
+.searchInput {
+  @apply bg-primaryBlack text-white rounded-xl  text-lg p-2 w-80 h-10;
+}
+
+@keyframes slideout {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50px);
+  }
+}
+
+@keyframes slidein {
+  0% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
